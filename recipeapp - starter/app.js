@@ -36,14 +36,15 @@ const fetchList = async () => {
                 screen.main.querySelector(".categories .active").classList.remove("active")
                 
                 div.classList.add("active")
+                getRecipeOfCategory(categories[index].strCategory)
             })
             getRecipeOfCategory(categories[index].strCategory)
             if (index == 0) {
                 div.classList.add('active')
             }
-
-
             screen.recipe.appendChild(div)
+
+
         }
         // Categories
     } catch (err) {
